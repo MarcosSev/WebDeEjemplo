@@ -125,7 +125,9 @@ nav a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 20;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   width: 100%;
   padding: 0.55rem max(1rem, calc((100% - 1120px) / 2));
   border-bottom: 1px solid rgb(255 255 255 / 12%);
@@ -137,9 +139,17 @@ nav a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  width: 100%;
+  width: auto;
   gap: 0.4rem;
+}
+
+.site-navigation > .nav-primary {
+  justify-content: flex-start;
+}
+
+.site-navigation > .nav-secondary {
+  justify-content: flex-end;
+  margin-left: auto;
 }
 
 .site-navigation .nav-dropdown {
@@ -216,6 +226,74 @@ nav a:focus-visible {
 
 .site-navigation .nav-menu a {
   white-space: nowrap;
+}
+
+.site-navigation .nav-subdropdown {
+  position: relative;
+}
+
+.site-navigation .nav-subdropdown > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: #e2e9ff;
+  font-size: 0.94rem;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.site-navigation .nav-subdropdown > summary::-webkit-details-marker {
+  display: none;
+}
+
+.site-navigation .nav-subdropdown > summary::after {
+  margin-left: 1rem;
+  border: 0.3rem solid transparent;
+  border-left-color: currentColor;
+  content: "";
+  transition: transform 160ms ease;
+}
+
+.site-navigation .nav-subdropdown > summary:hover,
+.site-navigation .nav-subdropdown > summary:focus-visible,
+.site-navigation .nav-subdropdown[open] > summary {
+  border-color: rgb(255 255 255 / 17%);
+  color: #fff;
+  background: rgb(255 255 255 / 11%);
+}
+
+.site-navigation .nav-subdropdown[open] > summary::after,
+.site-navigation .nav-subdropdown:focus-within > summary::after {
+  transform: rotate(90deg);
+}
+
+.site-navigation .nav-submenu {
+  display: none;
+  position: absolute;
+  top: -0.35rem;
+  left: calc(100% - 0.15rem);
+  z-index: 6;
+  min-width: 12rem;
+  padding: 0.35rem;
+  border: 1px solid rgb(255 255 255 / 17%);
+  border-radius: 0.7rem;
+  background: #253c70;
+  box-shadow: 0 8px 26px rgb(20 34 68 / 24%);
+}
+
+.site-navigation .nav-subdropdown[open] > .nav-submenu,
+.site-navigation .nav-subdropdown:focus-within > .nav-submenu {
+  display: block;
+}
+
+@media (hover: hover) {
+  .site-navigation .nav-subdropdown:hover > .nav-submenu {
+    display: block;
+  }
 }
 
 main {
@@ -678,8 +756,17 @@ footer a:hover {
     padding: 0.45rem 0.65rem;
   }
 
+  .site-navigation > .nav-primary {
+    justify-content: flex-start;
+  }
+
+  .site-navigation > .nav-secondary {
+    justify-content: flex-end;
+    margin-left: 0;
+  }
+
   .site-navigation > ul {
-    justify-content: center;
+    width: 100%;
     gap: 0.2rem;
   }
 
@@ -689,6 +776,15 @@ footer a:hover {
 
   .site-navigation .nav-dropdown summary {
     padding: 0.45rem 0.65rem;
+  }
+
+  .site-navigation .nav-submenu {
+    position: static;
+    min-width: 0;
+    margin: 0.2rem 0 0 0.45rem;
+    border: 0;
+    background: rgb(0 0 0 / 12%);
+    box-shadow: none;
   }
 
   form label,

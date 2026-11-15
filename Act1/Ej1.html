@@ -7,25 +7,51 @@
   </head>
   <body>
     <nav class="site-navigation" aria-label="Navegación principal">
-      <ul>
+      <ul class="nav-primary">
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="../html/horario.html">Horario</a></li>
         <li><a href="../html/formulario.html">Formulario</a></li>
+      </ul>
+      <ul class="nav-secondary">
         <li>
           <details class="nav-dropdown">
             <summary>Actividades</summary>
             <div class="nav-menu">
-              <a href="Ej1.html">Act. 1 - Ej. 1</a>
-              <a href="Ej2.html">Act. 1 - Ej. 2</a>
-              <a href="Ej3.html">Act. 1 - Ej. 3</a>
-              <a href="../Act2/Ej1.html">Act. 2 - Ej. 1</a>
-              <a href="../Act2/Ej2.html">Act. 2 - Ej. 2</a>
-              <a href="../Act2/ej3.html">Act. 2 - Ej. 3</a>
+              <details class="nav-subdropdown">
+                <summary>Act. 1</summary>
+                <div class="nav-submenu">
+                  <a href="Ej1.html">Ej. 1</a>
+                  <a href="Ej2.html">Ej. 2</a>
+                  <a href="Ej3.html">Ej. 3</a>
+                </div>
+              </details>
+              <details class="nav-subdropdown">
+                <summary>Act. 2</summary>
+                <div class="nav-submenu">
+                  <a href="../Act2/Ej1.html">Ej. 1</a>
+                  <a href="../Act2/Ej2.html">Ej. 2</a>
+                  <a href="../Act2/ej3.html">Ej. 3</a>
+                </div>
+              </details>
             </div>
           </details>
         </li>
-        <li><a href="../html/PPTjuego.html">Piedra, papel o tijera</a></li>
-        <li><a href="../html/Calculadora.html">Calculadora</a></li>
+        <li>
+          <details class="nav-dropdown">
+            <summary>Juegos</summary>
+            <div class="nav-menu">
+              <a href="../html/PPTjuego.html">Piedra, papel o tijera</a>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="nav-dropdown">
+            <summary>Herramientas</summary>
+            <div class="nav-menu">
+              <a href="../html/Calculadora.html">Calculadora</a>
+            </div>
+          </details>
+        </li>
       </ul>
     </nav>
     <h1>Esto es un encabezado h1</h1>
