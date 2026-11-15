@@ -2,16 +2,25 @@
 <html lang="es">
   <head>
     <title>Piedra, papel o tijera</title>
-    <link rel="stylesheet" href="/css/estilo.css" />
-    <script src="/js/juego.js" defer></script>
-    <script src="/js/tema.js" defer></script>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script src="../js/juego.js" defer></script>
+    <script src="../js/tema.js" defer></script>
   </head>
   <body>
-    <main>
+    <main class="game-page">
       <div class="opciones">
-        <button type="button" onclick="juego('piedra')">Piedra</button>
-        <button type="button" onclick="juego('papel')">Papel</button>
-        <button type="button" onclick="juego('tijera')">Tijera</button>
+        <button type="button" onclick="juego('piedra')">
+          Piedra
+          <span class="opcion-simbolo" aria-hidden="true">🪨</span>
+        </button>
+        <button type="button" onclick="juego('papel')">
+          Papel
+          <span class="opcion-simbolo" aria-hidden="true">📄</span>
+        </button>
+        <button type="button" onclick="juego('tijera')">
+          Tijera
+          <span class="opcion-simbolo" aria-hidden="true">✂️</span>
+        </button>
       </div>
 
       <p id="marcador">Partidas jugadas: 0</p>

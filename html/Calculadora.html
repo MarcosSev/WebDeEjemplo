@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/css/estilo.css">
+        <link rel="stylesheet" href="../css/estilo.css">
         <script src="/js/calculadora.js"></script>
         <script src="/js/tema.js" defer></script>
     </head>
@@ -14,7 +14,8 @@
                 <tr>
                     <th colspan="4"><input type="text" id="pantalla" value="0" readonly></th>
                 </tr>
-                <tbody>
+            </thead>
+            <tbody>
                     <tr>
                         <th><button onclick="">e</button></th>
                         <th><button onclick="">CE</button></th>
@@ -45,8 +46,7 @@
                         <th><button onclick="calcular()">=</button></th>
                         <th><button onclick="escribir('+')">+</button></th>
                     </tr>
-                </tbody>
-            </thead>
+            </tbody>
         </table>
     </body>
 </html>

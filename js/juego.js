@@ -4,7 +4,7 @@ let empatadas = 0;
 let perdidas = 0;
 
 function juego(jugador) {
-  const opciones = ["piedra", "papel", "tijeras"];
+  const opciones = ["piedra", "papel", "tijera"];
   const maquina = opciones[Math.floor(Math.random() * opciones.length)];
   let mensaje;
 

@@ -413,14 +413,30 @@ img {
 .opciones {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.7rem;
   margin-bottom: 1.5rem;
 }
 
+.game-page {
+  text-align: center;
+}
+
 .opciones button {
+  display: flex;
+  min-height: 6rem;
   min-width: 7rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
   border-color: #e3e7f4;
   background: linear-gradient(145deg, #fff, #f7f8ff);
+}
+
+.opcion-simbolo {
+  font-size: 2rem;
+  line-height: 1;
 }
 
 #marcador,
