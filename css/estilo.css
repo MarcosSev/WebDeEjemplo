@@ -122,6 +122,8 @@ nav a:focus-visible {
 }
 
 .site-navigation {
+  display: flex;
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
   z-index: 20;
