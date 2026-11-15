@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Calculadora</title>
+        <link rel="icon" type="image/png" sizes="512x512" href="../img/favicon%20moai.png" />
+        <link rel="shortcut icon" type="image/png" href="../img/favicon%20moai.png" />
+        <link rel="apple-touch-icon" sizes="512x512" href="../img/favicon%20moai.png" />
         <link rel="stylesheet" href="../css/estilo.css">
         <script src="../js/calculadora.js" defer></script>
         <script src="../js/tema.js" defer></script>
@@ -21,6 +24,7 @@
                     <details class="nav-dropdown">
                         <summary>Actividades</summary>
                         <div class="nav-menu">
+                            <a href="../actividades.html">Ver todas</a>
                             <details class="nav-subdropdown">
                                 <summary>Act. 1</summary>
                                 <div class="nav-submenu">
@@ -79,10 +83,10 @@
             </thead>
             <tbody>
               <tr>
-                <th><button type="button" onclick="">e</button></th>
-                <th><button type="button" onclick="">CE</button></th>
-                <th><button type="button" onclick="borrar()">C</button></th>
-                <th><button type="button">-</button></th>
+                <th><button type="button" onclick="insertarEuler()" aria-label="Insertar el número e">e</button></th>
+                <th><button type="button" onclick="borrarEntrada()" aria-label="Borrar la entrada actual y la última cuenta">CE</button></th>
+                <th><button type="button" onclick="borrar()" aria-label="Borrar todo">C</button></th>
+                <th><button type="button" onclick="cambiarSigno()" aria-label="Cambiar el signo">±</button></th>
               </tr>
               <tr>
                 <th><button type="button" onclick="escribir('7')">7</button></th>
@@ -110,6 +114,12 @@
               </tr>
             </tbody>
           </table>
+          <section class="calculator-memory" aria-labelledby="calculator-memory-title">
+            <h2 id="calculator-memory-title">Última cuenta</h2>
+            <p id="ultima-cuenta">Todavía no hay ninguna cuenta guardada.</p>
+            <p class="calculator-memory__note">Pulsa CE para borrar esta cuenta guardada.</p>
+            <p id="estado-memoria" class="calculator-memory__status" role="status" aria-live="polite"></p>
+          </section>
         </main>
         <footer><p>Lenguaje de Marcas · DAW</p></footer>
     </body>

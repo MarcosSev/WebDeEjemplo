@@ -62,3 +62,7 @@ tr {
     text-align: center;
     background-color: rgb(218, 218, 218)
 }
+
+.activity-embedded .site-navigation {
+    display: none;
+}

@@ -2,20 +2,20 @@
   color-scheme: light;
   font-family:
     Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #202b42;
-  background: #f5f7fc;
+  color: #303638;
+  background: #f2efe7;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --color-ink: #1b2944;
-  --color-primary: #4b5fe2;
-  --color-primary-dark: #394bc4;
-  --color-accent: #14a998;
-  --color-muted: #748099;
-  --color-border: #e2e7f1;
-  --surface: #fff;
-  --shadow-card: 0 24px 60px rgb(34 49 91 / 10%), 0 3px 12px rgb(34 49 91 / 4%);
+  --color-ink: #303638;
+  --color-primary: #71867d;
+  --color-primary-dark: #4d655d;
+  --color-accent: #bc826e;
+  --color-muted: #727772;
+  --color-border: #dedbd1;
+  --surface: #fffdf8;
+  --shadow-card: 0 24px 60px rgb(53 48 39 / 10%), 0 3px 12px rgb(53 48 39 / 5%);
 }
 
 * {
@@ -27,16 +27,16 @@ body {
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
-  color: #202b42;
-  background-color: #f5f7fc;
+  color: #303638;
+  background-color: #f2efe7;
   background-image:
-    radial-gradient(ellipse at 12% 0%, rgb(213 224 255 / 62%), transparent 36%),
-    radial-gradient(ellipse at 92% 18%, rgb(211 245 238 / 42%), transparent 30%);
+    radial-gradient(ellipse at 12% 0%, rgb(219 208 186 / 56%), transparent 36%),
+    radial-gradient(ellipse at 92% 18%, rgb(199 226 216 / 48%), transparent 30%);
   line-height: 1.65;
 }
 
 body[background] {
-  background-color: #f5f7fc;
+  background-color: #f2efe7;
 }
 
 header {
@@ -49,11 +49,25 @@ header {
   width: min(100% - 2rem, 900px);
   margin: 1.75rem auto 0;
   padding: clamp(1.4rem, 4vw, 2.25rem);
-  border: 1px solid rgb(255 255 255 / 90%);
+  padding-right: clamp(5.5rem, 10vw, 8rem);
+  border: 1px solid rgb(255 255 255 / 82%);
   border-radius: 1.2rem;
   color: var(--color-ink);
-  background: linear-gradient(145deg, #fff, #f8faff);
+  background: linear-gradient(145deg, #fffefa, #f2efe7);
   box-shadow: var(--shadow-card);
+}
+
+header::after {
+  position: absolute;
+  top: 50%;
+  right: clamp(1rem, 3vw, 2rem);
+  width: clamp(3.5rem, 8vw, 5.25rem);
+  aspect-ratio: 1;
+  background: url("../img/favicon%20moai.png") center / contain no-repeat;
+  content: "";
+  opacity: 0.2;
+  pointer-events: none;
+  transform: translateY(-50%);
 }
 
 header h1 {
@@ -132,8 +146,12 @@ nav a:focus-visible {
   width: 100%;
   padding: 0.55rem max(1rem, calc((100% - 1120px) / 2));
   border-bottom: 1px solid rgb(255 255 255 / 12%);
-  background: linear-gradient(112deg, #1a2848 0%, #253c70 100%);
-  box-shadow: 0 8px 26px rgb(20 34 68 / 18%);
+  background: linear-gradient(112deg, #282f31 0%, #40504f 100%);
+  box-shadow: 0 8px 26px rgb(34 42 39 / 20%);
+}
+
+.activity-embedded .site-navigation {
+  display: none;
 }
 
 .site-navigation > ul {
@@ -205,8 +223,8 @@ nav a:focus-visible {
   padding: 0.35rem;
   border: 1px solid rgb(255 255 255 / 17%);
   border-radius: 0.7rem;
-  background: #253c70;
-  box-shadow: 0 8px 26px rgb(20 34 68 / 24%);
+  background: #354341;
+  box-shadow: 0 8px 26px rgb(25 34 30 / 28%);
 }
 
 .site-navigation .nav-dropdown[open] > .nav-menu,
@@ -281,8 +299,8 @@ nav a:focus-visible {
   padding: 0.35rem;
   border: 1px solid rgb(255 255 255 / 17%);
   border-radius: 0.7rem;
-  background: #253c70;
-  box-shadow: 0 8px 26px rgb(20 34 68 / 24%);
+  background: #354341;
+  box-shadow: 0 8px 26px rgb(25 34 30 / 28%);
 }
 
 .site-navigation .nav-subdropdown[open] > .nav-submenu,
@@ -302,11 +320,18 @@ main {
   margin: 1.25rem auto 2.5rem;
   padding: clamp(1.4rem, 4vw, 2.75rem);
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 85%);
+  border: 1px solid rgb(255 255 255 / 82%);
   border-radius: 1.25rem;
-  background: rgb(255 255 255 / 94%);
+  background: rgb(255 253 248 / 96%);
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(12px);
+}
+
+main.calculator-page {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(1rem, 3vw, 2rem);
 }
 
 main.home-content {
@@ -337,7 +362,7 @@ main.home-content {
   padding: clamp(1rem, 3vw, 1.5rem);
   border: 1px solid var(--color-border);
   border-radius: 1rem;
-  background: linear-gradient(145deg, #f8f9ff, #f5fbfa);
+  background: linear-gradient(145deg, #fbf8f0, #eff5f0);
 }
 
 .home-feature h2 {
@@ -378,7 +403,7 @@ main::before {
   left: 12%;
   height: 3px;
   border-radius: 0 0 1rem 1rem;
-  background: linear-gradient(90deg, var(--color-primary), #8b75f2, var(--color-accent));
+  background: linear-gradient(90deg, var(--color-primary), #c39a73, var(--color-accent));
   content: "";
 }
 
@@ -402,7 +427,7 @@ a {
 }
 
 a:hover {
-  color: #27399f;
+  color: #344c48;
 }
 
 form fieldset {
@@ -411,7 +436,7 @@ form fieldset {
   padding: clamp(1rem, 3vw, 1.6rem);
   border: 1px solid var(--color-border);
   border-radius: 0.9rem;
-  background: linear-gradient(145deg, #fff, #fbfcff);
+  background: linear-gradient(145deg, #fffefa, #f8f6ef);
 }
 
 form legend {
@@ -428,7 +453,7 @@ form p {
 form label {
   display: inline-block;
   margin-bottom: 0.35rem;
-  color: #3d4962;
+  color: #454c48;
   font-size: 1.125rem;
   font-weight: 650;
   line-height: 1.45;
@@ -438,10 +463,10 @@ input:not([type="radio"]),
 textarea {
   max-width: 100%;
   padding: 0.7rem 0.85rem;
-  border: 1px solid #d5dceb;
+  border: 1px solid #d9d8d0;
   border-radius: 0.65rem;
-  color: #202b42;
-  background: #fff;
+  color: #303638;
+  background: #fffefa;
   font: inherit;
   transition:
     border-color 180ms ease,
@@ -468,8 +493,8 @@ input:not([type="radio"]):focus,
 textarea:focus {
   border-color: var(--color-primary);
   outline: none;
-  background: #fff;
-  box-shadow: 0 0 0 4px rgb(75 95 226 / 13%);
+  background: #fffefa;
+  box-shadow: 0 0 0 4px rgb(113 134 125 / 18%);
 }
 
 form input[type="radio"] {
@@ -489,8 +514,8 @@ button {
   padding: 0.7rem 1.05rem;
   border: 1px solid var(--color-border);
   border-radius: 0.65rem;
-  color: #35415a;
-  background: #fff;
+  color: #3b4441;
+  background: #fffefa;
   font: inherit;
   font-weight: 650;
   cursor: pointer;
@@ -504,10 +529,10 @@ button {
 
 button:hover {
   transform: translateY(-1px);
-  border-color: #bdc8ec;
+  border-color: #b6c4bb;
   color: var(--color-primary-dark);
-  background: #f7f8ff;
-  box-shadow: 0 5px 14px rgb(41 58 116 / 8%);
+  background: #f2f5ef;
+  box-shadow: 0 5px 14px rgb(53 67 61 / 10%);
 }
 
 button:active {
@@ -516,21 +541,21 @@ button:active {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid rgb(75 95 226 / 38%);
+  outline: 3px solid rgb(113 134 125 / 55%);
   outline-offset: 3px;
 }
 
 form button[type="submit"] {
   border-color: transparent;
   color: #fff;
-  background: linear-gradient(110deg, var(--color-primary), #695ce4);
-  box-shadow: 0 7px 16px rgb(75 95 226 / 22%);
+  background: linear-gradient(110deg, #596e65, #77988a);
+  box-shadow: 0 7px 16px rgb(67 92 81 / 24%);
 }
 
 form button[type="submit"]:hover {
   color: #fff;
-  background: linear-gradient(110deg, var(--color-primary-dark), #5747d2);
-  box-shadow: 0 9px 20px rgb(75 95 226 / 28%);
+  background: linear-gradient(110deg, #43584f, #648577);
+  box-shadow: 0 9px 20px rgb(67 92 81 / 30%);
 }
 
 form button[type="reset"] {
@@ -541,17 +566,17 @@ form button[type="reset"] {
   width: min(100% - 2rem, 360px);
   margin: 2rem auto;
   table-layout: fixed;
-  border: 1px solid rgb(255 255 255 / 85%);
+  border: 1px solid rgb(255 255 255 / 82%);
   border-radius: 1.2rem;
   border-spacing: 0;
-  background: rgb(255 255 255 / 94%);
-  box-shadow: 0 28px 65px rgb(38 51 98 / 15%), 0 6px 16px rgb(38 51 98 / 7%);
+  background: rgb(255 253 248 / 96%);
+  box-shadow: 0 28px 65px rgb(53 48 39 / 14%), 0 6px 16px rgb(53 48 39 / 7%);
 }
 
 .calculator th {
   padding: 0.45rem;
   border: 0;
-  color: #293653;
+  color: #303638;
   background: transparent;
 }
 
@@ -562,10 +587,10 @@ form button[type="reset"] {
 .calculator input {
   width: 100%;
   min-height: 3.8rem;
-  border: 1px solid #e6eaf3;
+  border: 1px solid #e4e0d6;
   border-radius: 0.8rem;
   color: var(--color-ink);
-  background: #f7f8fc;
+  background: #f8f6ef;
   font-size: 1.7rem;
   font-weight: 650;
   text-align: right;
@@ -576,22 +601,22 @@ form button[type="reset"] {
   min-height: 3rem;
   border-color: transparent;
   border-radius: 0.75rem;
-  color: #34415d;
-  background: #f2f4fa;
+  color: #3b4441;
+  background: #f1f1ea;
   font-size: 1.05rem;
   font-weight: 650;
 }
 
 .calculator button:hover {
-  border-color: #dce1fb;
+  border-color: #cbd6ce;
   color: var(--color-primary-dark);
-  background: #e9ecff;
+  background: #e8eee8;
 }
 
 .calculator tbody tr:nth-child(2) button,
 .calculator tbody tr td:last-child button {
-  color: #424fc0;
-  background: #eceeff;
+  color: #4d655d;
+  background: #e5ece5;
 }
 
 .calculator tbody tr:nth-child(2) button:hover,
@@ -603,12 +628,41 @@ form button[type="reset"] {
 .calculator tbody tr:last-child th:nth-child(3) button {
   border-color: transparent;
   color: #fff;
-  background: linear-gradient(120deg, #4b5fe2, #7261e8);
-  box-shadow: 0 5px 13px rgb(75 95 226 / 20%);
+  background: linear-gradient(120deg, #596e65, #8b9b76);
+  box-shadow: 0 5px 13px rgb(67 92 81 / 22%);
 }
 
 .calculator tbody tr:last-child th:nth-child(3) button:hover {
-  background: linear-gradient(120deg, #394bc4, #5c4bd5);
+  background: linear-gradient(120deg, #43584f, #70835f);
+}
+
+.calculator-memory {
+  width: min(100% - 2rem, 360px);
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.9rem;
+  color: var(--color-ink);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  text-align: left;
+}
+
+.calculator-memory h2 {
+  margin: 0 0 0.5rem;
+  color: var(--color-ink);
+  font-size: 1.2rem;
+}
+
+.calculator-memory p {
+  margin: 0 0 0.6rem;
+  overflow-wrap: anywhere;
+}
+
+.calculator-memory__note,
+.calculator-memory__status {
+  color: var(--color-muted);
+  font-size: 0.9rem;
 }
 
 table:not(.calculator) {
@@ -633,7 +687,7 @@ table:not(.calculator) td {
 
 table:not(.calculator) th {
   color: #fff;
-  background: linear-gradient(110deg, #1b2b4c, #304a7c);
+  background: linear-gradient(110deg, #394744, #64776a);
   font-weight: 700;
 }
 
@@ -647,14 +701,14 @@ table:not(.calculator) td:last-child {
 }
 
 .schedule td.Programación {
-  color: #2b396f;
-  background-color: #e4e9ff;
+  color: #3d5149;
+  background-color: #e6ebe2;
   font-weight: 400;
 }
 
 .schedule td.recess {
-  color: #176253;
-  background-color: #d9f3ee;
+  color: #38695d;
+  background-color: #dceee5;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -686,13 +740,22 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  border-color: #e3e7f4;
-  background: linear-gradient(145deg, #fff, #f7f8ff);
+  border-color: #e1ded4;
+  background: linear-gradient(145deg, #fffefa, #f3f1e9);
 }
 
 .opcion-simbolo {
   font-size: 2rem;
   line-height: 1;
+}
+
+.opcion-simbolo img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0;
+  object-fit: contain;
+  box-shadow: none;
 }
 
 #marcador,
@@ -702,10 +765,10 @@ img {
   display: inline-block;
   margin: 0 0.45rem 0.75rem 0;
   padding: 0.55rem 0.75rem;
-  border: 1px solid #e7eaf3;
+  border: 1px solid #e1ded4;
   border-radius: 0.7rem;
-  color: #59657e;
-  background: #f8f9fd;
+  color: #58615c;
+  background: #f7f5ef;
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -713,9 +776,9 @@ img {
 #resultado {
   margin-top: 1rem;
   padding: 1.25rem;
-  border: 1px solid #e7eaf3;
+  border: 1px solid #e1ded4;
   border-radius: 0.9rem;
-  background: linear-gradient(145deg, #f8f9ff, #f5fbfa);
+  background: linear-gradient(145deg, #f8f5ed, #edf4ef);
 }
 
 #resultado h2 {
@@ -726,8 +789,8 @@ img {
 footer {
   margin-top: auto;
   padding: 1.35rem 1.5rem;
-  color: #dbe4f3;
-  background: linear-gradient(112deg, #1a2848 0%, #253c70 100%);
+  color: #e4e8e1;
+  background: linear-gradient(112deg, #282f31 0%, #40504f 100%);
   text-align: center;
 }
 
@@ -736,7 +799,7 @@ footer p {
 }
 
 footer a {
-  color: #b7c8ff;
+  color: #c6d6c9;
 }
 
 footer a:hover {
@@ -746,6 +809,13 @@ footer a:hover {
 @media (max-width: 640px) {
   header {
     margin-top: 1rem;
+    padding-right: 4.5rem;
+  }
+
+  header::after {
+    right: 0.9rem;
+    width: 2.8rem;
+    opacity: 0.14;
   }
 
   nav {
@@ -798,6 +868,10 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 
+  main.calculator-page {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .module-list {
     grid-template-columns: 1fr;
   }
@@ -843,8 +917,8 @@ footer a:hover {
   border: 1px solid rgb(255 255 255 / 75%);
   border-radius: 999px;
   color: #fff;
-  background: linear-gradient(115deg, #263d70, #4b5fe2);
-  box-shadow: 0 8px 24px rgb(25 39 80 / 26%);
+  background: linear-gradient(115deg, #303b37, #607c6e);
+  box-shadow: 0 8px 24px rgb(43 57 50 / 28%);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -852,8 +926,8 @@ footer a:hover {
 #theme-toggle:hover {
   border-color: #fff;
   color: #fff;
-  background: linear-gradient(115deg, #1d315d, #394bc4);
-  box-shadow: 0 10px 28px rgb(25 39 80 / 34%);
+  background: linear-gradient(115deg, #26312d, #4d695b);
+  box-shadow: 0 10px 28px rgb(43 57 50 / 36%);
 }
 
 #theme-toggle {
@@ -885,88 +959,88 @@ footer a:hover {
 
 :root[data-theme="night"] {
   color-scheme: dark;
-  color: #e8edf7;
-  background: #101725;
-  --color-ink: #edf2ff;
-  --color-primary: #9aa8ff;
-  --color-primary-dark: #b1bcff;
-  --color-accent: #57d2bf;
-  --color-muted: #a4afc4;
-  --color-border: #34425b;
-  --surface: #1b2638;
+  color: #e6e9e2;
+  background: #151a1b;
+  --color-ink: #e6e9e2;
+  --color-primary: #a6b8aa;
+  --color-primary-dark: #c1ceb9;
+  --color-accent: #d29a81;
+  --color-muted: #b0b8ae;
+  --color-border: #414b47;
+  --surface: #202727;
   --shadow-card: 0 24px 60px rgb(0 0 0 / 28%), 0 3px 12px rgb(0 0 0 / 18%);
 }
 
 :root[data-theme="night"] body {
-  color: #e8edf7;
-  background: #101725 !important;
+  color: #e6e9e2;
+  background: #151a1b !important;
   background-image:
-    radial-gradient(ellipse at 12% 0%, rgb(61 76 129 / 22%), transparent 36%),
-    radial-gradient(ellipse at 92% 18%, rgb(25 101 91 / 14%), transparent 30%) !important;
+    radial-gradient(ellipse at 12% 0%, rgb(133 112 81 / 17%), transparent 36%),
+    radial-gradient(ellipse at 92% 18%, rgb(65 112 91 / 16%), transparent 30%) !important;
 }
 
 :root[data-theme="night"] body :is(h1, h2, h3, p, li, pre, b, caption, label, legend) {
-  color: #e8edf7 !important;
+  color: #e6e9e2 !important;
 }
 
 :root[data-theme="night"] header,
 :root[data-theme="night"] .site-navigation,
 :root[data-theme="night"] footer {
-  color: #e8edf7;
-  background: linear-gradient(112deg, #111b2d 0%, #1b2a46 100%);
+  color: #e6e9e2;
+  background: linear-gradient(112deg, #151b1c 0%, #283433 100%);
 }
 
 :root[data-theme="night"] main,
 :root[data-theme="night"] form fieldset,
 :root[data-theme="night"] #resultado {
-  border-color: #34425b;
-  background: #1b2638;
+  border-color: #414b47;
+  background: #202727;
   box-shadow: 0 24px 60px rgb(0 0 0 / 24%);
 }
 
 :root[data-theme="night"] .home-feature {
-  border-color: #34425b;
-  color: #e8edf7;
-  background: #182234;
+  border-color: #414b47;
+  color: #e6e9e2;
+  background: #202a27;
 }
 
 :root[data-theme="night"] .module-list {
-  color: #c4cde0;
+  color: #c6cec3;
 }
 
 :root[data-theme="night"] form fieldset {
-  background: linear-gradient(145deg, #1b2638, #182234);
+  background: linear-gradient(145deg, #202727, #202a27);
 }
 
 :root[data-theme="night"] form label {
-  color: #c4cde0;
+  color: #c6cec3;
 }
 
 :root[data-theme="night"] input:not([type="radio"]),
 :root[data-theme="night"] textarea,
 :root[data-theme="night"] form input:not([type="radio"]),
 :root[data-theme="night"] form textarea {
-  border-color: #3a4964;
-  color: #edf2ff;
-  background: #121b2a;
+  border-color: #414b47;
+  color: #e6e9e2;
+  background: #171d1e;
 }
 
 :root[data-theme="night"] input:not([type="radio"]):focus,
 :root[data-theme="night"] textarea:focus {
-  border-color: #9aa8ff;
-  box-shadow: 0 0 0 4px rgb(154 168 255 / 18%);
+  border-color: #a6b8aa;
+  box-shadow: 0 0 0 4px rgb(166 184 170 / 20%);
 }
 
 :root[data-theme="night"] button:not(#theme-toggle) {
-  border-color: #3a4964;
-  color: #e2e8f5;
-  background: #253249;
+  border-color: #414b47;
+  color: #e2e7df;
+  background: #29312e;
 }
 
 :root[data-theme="night"] button:not(#theme-toggle):hover {
-  border-color: #6273bc;
+  border-color: #718b79;
   color: #fff;
-  background: #304161;
+  background: #35463c;
 }
 
 :root[data-theme="night"] form button[type="submit"],
@@ -975,63 +1049,63 @@ footer a:hover {
 :root[data-theme="night"] .calculator tbody tr:last-child th:nth-child(3) button:hover {
   border-color: transparent;
   color: #fff;
-  background: linear-gradient(120deg, #5968df, #8171ef);
+  background: linear-gradient(120deg, #596e65, #89765f);
 }
 
 :root[data-theme="night"] .calculator {
-  border-color: #34425b;
-  background: #1b2638;
+  border-color: #414b47;
+  background: #202727;
   box-shadow: 0 28px 65px rgb(0 0 0 / 32%), 0 6px 16px rgb(0 0 0 / 18%);
 }
 
 :root[data-theme="night"] .calculator th {
-  color: #e8edf7;
+  color: #e6e9e2;
   background: transparent;
 }
 
 :root[data-theme="night"] .calculator input {
-  border-color: #3a4964;
-  color: #f0f3ff;
-  background: #121b2a;
+  border-color: #414b47;
+  color: #e6e9e2;
+  background: #171d1e;
 }
 
 :root[data-theme="night"] .calculator button,
 :root[data-theme="night"] .calculator tbody tr:nth-child(2) button,
 :root[data-theme="night"] .calculator tbody tr td:last-child button {
   border-color: transparent;
-  color: #dce3ff;
-  background: #2a3650;
+  color: #dce5da;
+  background: #2b3530;
 }
 
 :root[data-theme="night"] .calculator button:hover,
 :root[data-theme="night"] .calculator tbody tr:nth-child(2) button:hover,
 :root[data-theme="night"] .calculator tbody tr td:last-child button:hover {
   color: #fff;
-  background: #4658aa;
+  background: #4a6654;
 }
 
 :root[data-theme="night"] table:not(.calculator) {
-  border-color: #34425b;
-  background: #1b2638;
+  border-color: #414b47;
+  background: #202727;
   box-shadow: 0 24px 60px rgb(0 0 0 / 22%);
 }
 
 :root[data-theme="night"] table:not(.calculator) th {
-  color: #f2f5fc;
-  background: linear-gradient(110deg, #1a2841, #263958);
+  color: #f1f3ed;
+  background: linear-gradient(110deg, #293632, #40594a);
 }
 
 :root[data-theme="night"] table:not(.calculator) td {
-  border-color: #34425b;
-  color: #e8edf7;
+  border-color: #414b47;
+  color: #e6e9e2;
 }
 
 :root[data-theme="night"] table:not(.calculator):not(.schedule) td:not([style*="background"]) {
-  background-color: #1b2638 !important;
+  background-color: #202727 !important;
 }
 
 :root[data-theme="night"] table:not(.calculator) td[style*="background"] {
-  color: #202b42;
+  color: #28322d;
 }
 
 :root[data-theme="night"] table:not(.calculator) td[style*="rgb(161, 95, 95)"] {
@@ -1039,9 +1113,9 @@ footer a:hover {
 }
 
 :root[data-theme="night"] .schedule td {
-  border-color: #3a4964;
-  color: #edf2ff !important;
-  background-color: #1b2638 !important;
+  border-color: #414b47;
+  color: #e6e9e2 !important;
+  background-color: #202727 !important;
 }
 
 :root[data-theme="night"] .schedule td[style*="rgb(0, 158, 26)"],
@@ -1073,7 +1147,7 @@ footer a:hover {
 }
 
 :root[data-theme="night"] .schedule td.Programación {
-  background-color: #2b3d60 !important;
+  background-color: #354a40 !important;
 }
 
 :root[data-theme="night"] .schedule td.recess {
@@ -1090,50 +1164,50 @@ footer a:hover {
 :root[data-theme="night"] .td1,
 :root[data-theme="night"] .td2,
 :root[data-theme="night"] .th2 {
-  border-color: #465675;
+  border-color: #414b47;
 }
 
 :root[data-theme="night"] .liNone,
 :root[data-theme="night"] .tabladiv1,
 :root[data-theme="night"] .tabladiv2 {
-  color: #e8edf7;
-  background-color: #1b2638;
+  color: #e6e9e2;
+  background-color: #202727;
 }
 
 :root[data-theme="night"] .td2,
 :root[data-theme="night"] .th2 {
-  color: #e8edf7;
-  background-color: #253249;
+  color: #e6e9e2;
+  background-color: #29312e;
 }
 
 :root[data-theme="night"] a {
-  color: #b1bcff;
+  color: #b9cbb9;
 }
 
 :root[data-theme="night"] a:hover {
-  color: #d5dcff;
+  color: #d7e5d5;
 }
 
 :root[data-theme="night"] #marcador,
 :root[data-theme="night"] #ganadas,
 :root[data-theme="night"] #empatadas,
 :root[data-theme="night"] #perdidas {
-  border-color: #34425b;
-  color: #d4dced;
-  background: #202d43;
+  border-color: #414b47;
+  color: #d2dbd0;
+  background: #27322d;
 }
 
 :root[data-theme="night"] #theme-toggle {
-  border-color: #53658b;
-  color: #202b42;
-  background: linear-gradient(115deg, #c0cbff, #74dece);
+  border-color: #778d7b;
+  color: #202b26;
+  background: linear-gradient(115deg, #c5d1bd, #8ec5b1);
   box-shadow: 0 8px 24px rgb(0 0 0 / 32%);
 }
 
 :root[data-theme="night"] #theme-toggle:hover {
-  border-color: #dce4ff;
-  color: #111b2d;
-  background: linear-gradient(115deg, #d5dcff, #9aeee0);
+  border-color: #dce8d9;
+  color: #151d19;
+  background: linear-gradient(115deg, #dbe5d2, #a4d5c1);
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -83,3 +83,7 @@
   padding-top: 15px;
   background-image: url("../img/controller.jfif");
 }
+
+.activity-embedded .site-navigation {
+  display: none;
+}
