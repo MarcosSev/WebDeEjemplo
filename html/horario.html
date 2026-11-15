@@ -1,24 +1,42 @@
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Horario semanal</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
     <link rel="stylesheet" href="../css/estiloWebEj.css" />
-    <script src="/js/tema.js" defer></script>
+    <script src="../js/tema.js" defer></script>
   </head>
-  <body style="text-align: center; background-color: rgb(192, 221, 233)">
+  <body class="schedule-page">
+    <nav class="site-navigation" aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="horario.html">Horario</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li>
+          <details class="nav-dropdown">
+            <summary>Actividades</summary>
+            <div class="nav-menu">
+              <a href="../Act1/Ej1.html">Act. 1 - Ej. 1</a>
+              <a href="../Act1/Ej2.html">Act. 1 - Ej. 2</a>
+              <a href="../Act1/Ej3.html">Act. 1 - Ej. 3</a>
+              <a href="../Act2/Ej1.html">Act. 2 - Ej. 1</a>
+              <a href="../Act2/Ej2.html">Act. 2 - Ej. 2</a>
+              <a href="../Act2/ej3.html">Act. 2 - Ej. 3</a>
+            </div>
+          </details>
+        </li>
+        <li><a href="PPTjuego.html">Piedra, papel o tijera</a></li>
+        <li><a href="Calculadora.html">Calculadora</a></li>
+      </ul>
+    </nav>
     <header>
-      <h1>Mi primera web</h1>
-      <nav>
-        <ul>
-          <a href="/index.html">Inicio</a>
-        </ul>
-        <ul>
-          <a href="/html/horario.html">Horario</a>
-        </ul>
-        <ul>
-          <a href="/html/formulario.html">Formulario</a>
-        </ul>
-      </nav>
+      <p class="eyebrow">Planificación semanal</p>
+      <h1>Horario de clases</h1>
     </header>
-    <table class="schedule">
+    <main class="schedule-content">
+      <table class="schedule">
+        <caption>Horario semanal de DAW</caption>
       <thead>
         <tr>
           <th></th>
@@ -31,124 +49,109 @@
       </thead>
       <tbody>
         <tr>
-          <td style="text-align: center">
+          <td class="time-slot">
             <b>8:30 <br />9:25</b>
           </td>
           <td class="Programación" rowspan="2">Programación</td>
-          <td style="text-align: center; background-color: rgb(0, 158, 26)">
+          <td class="subject-systems">
             Sistemas informáticos
           </td>
-          <td
-            rowspan="2"
-            style="text-align: center; background-color: rgb(226, 166, 216)"
-          >
+          <td class="subject-databases" rowspan="2">
             Bases de datos
           </td>
           <td rowspan="2" class="Programación">Programación</td>
-          <td
-            rowspan="2"
-            style="text-align: center; background-color: rgb(161, 95, 95)"
-          >
+          <td class="subject-employment" rowspan="2">
             Itinerario personal empleabilidad
           </td>
         </tr>
         <tr>
-          <td style="text-align: center">
+          <td class="time-slot">
             <b>9:25 <br />10:20</b>
           </td>
-          <td style="text-align: center; background-color: aqua">
+          <td class="subject-english">
             Inglés profesional
           </td>
         </tr>
         <tr>
-          <td style="text-align: center">
+          <td class="time-slot">
             <b>10:20 <br />11:15</b>
           </td>
-          <td bgcolor="59E03E" style="text-align: center">
+          <td class="subject-intermodular">
             Proyecto intermodular
           </td>
-          <td style="text-align: center; background-color: rgb(226, 166, 216)">
+          <td class="subject-databases">
             Bases de datos
           </td>
-          <td style="text-align: center; background-color: rgb(255, 207, 148)">
+          <td class="subject-language">
             Lenguaje de marcas
           </td>
-          <td style="text-align: center; background-color: rgb(0, 158, 26)">
+          <td class="subject-systems">
             Sistemas informáticos
           </td>
-          <td style="text-align: center; background-color: rgb(255, 207, 148)">
+          <td class="subject-language">
             Lenguaje de marcas
           </td>
         </tr>
         <tr>
-          <td style="text-align: center">
+          <td class="time-slot">
             <b>11:15 <br />11:45</b>
           </td>
-          <td colspan="5" class="recess" style="text-align: center">Recreo</td>
+          <td colspan="5" class="recess">Recreo</td>
         </tr>
         <tr>
-          <td style="text-align: center">
+          <td class="time-slot">
             <b>11:45 <br />12:40</b>
           </td>
-          <td style="text-align: center; background-color: rgb(0, 158, 26)">
+          <td class="subject-systems">
             Sistemas informáticos
           </td>
-          <td
-            rowspan="2"
-            style="text-align: center; background-color: rgb(226, 166, 216)"
-          >
+          <td class="subject-databases" rowspan="2">
             Bases de datos
           </td>
           <td rowspan="2" class="Programación">Programación</td>
-          <td style="text-align: center; background-color: rgb(0, 158, 26)">
+          <td class="subject-systems">
             Sistemas informáticos
           </td>
-          <td
-            style="text-align: center; background-color: rgb(255, 131, 131)"
-            ;
-          >
+          <td class="subject-digitalization">
             Digitalización
           </td>
         </tr>
         <tr>
-          <td style="text-align: center">
+          <td class="time-slot">
             <b>12:40 <br />13:35</b>
           </td>
-          <td
-            style="text-align: center; background-color: rgb(255, 131, 131)"
-            ;
-          >
+          <td class="subject-digitalization">
             Digitalización
           </td>
-          <td style="text-align: center; background-color: rgb(94, 188, 216)">
+          <td class="subject-sustainability">
             Sostenibilidad
           </td>
-          <td
-            rowspan="2"
-            style="text-align: center; background-color: rgb(233, 230, 183)"
-          >
+          <td class="subject-environments" rowspan="2">
             Entornos de desarrollo
           </td>
         </tr>
         <tr>
-          <td style="text-align: center">
+          <td class="time-slot">
             <b>13:35 <br />14:30</b>
           </td>
-          <td style="text-align: center; background-color: rgb(255, 207, 148)">
+          <td class="subject-language">
             Lenguaje de marcas
           </td>
-          <td style="text-align: center; background-color: rgb(161, 95, 95)">
+          <td class="subject-employment">
             Itinerario personal empleabilidad
           </td>
-          <td style="text-align: center; background-color: rgb(0, 158, 26)">
+          <td class="subject-systems">
             Sistemas informáticos
           </td>
-          <td style="text-align: center; background-color: rgb(8, 248, 248)">
+          <td class="subject-english">
             Inglés profesional
           </td>
         </tr>
       </tbody>
-    </table>
-    <footer></footer>
+      </table>
+    </main>
+    <footer>
+      <p>Horario semanal · DAW</p>
+    </footer>
   </body>
 </html>

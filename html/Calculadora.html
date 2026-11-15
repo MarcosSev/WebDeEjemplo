@@ -2,51 +2,89 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Calculadora</title>
         <link rel="stylesheet" href="../css/estilo.css">
-        <script src="/js/calculadora.js"></script>
-        <script src="/js/tema.js" defer></script>
+        <script src="../js/calculadora.js" defer></script>
+        <script src="../js/tema.js" defer></script>
     </head>
 
     <body class="calculator-page">
-        <h1>Calculadora</h1>
-        <table class="calculator">
+        <nav class="site-navigation" aria-label="Navegación principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="horario.html">Horario</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+                <li>
+                    <details class="nav-dropdown">
+                        <summary>Actividades</summary>
+                        <div class="nav-menu">
+                            <a href="../Act1/Ej1.html">Act. 1 - Ej. 1</a>
+                            <a href="../Act1/Ej2.html">Act. 1 - Ej. 2</a>
+                            <a href="../Act1/Ej3.html">Act. 1 - Ej. 3</a>
+                            <a href="../Act2/Ej1.html">Act. 2 - Ej. 1</a>
+                            <a href="../Act2/Ej2.html">Act. 2 - Ej. 2</a>
+                            <a href="../Act2/ej3.html">Act. 2 - Ej. 3</a>
+                        </div>
+                    </details>
+                </li>
+                <li><a href="PPTjuego.html">Piedra, papel o tijera</a></li>
+                <li><a href="Calculadora.html">Calculadora</a></li>
+            </ul>
+        </nav>
+        <header>
+            <p class="eyebrow">Herramientas</p>
+            <h1>Calculadora</h1>
+        </header>
+        <main class="calculator-page">
+          <table class="calculator">
             <thead>
-                <tr>
-                    <th colspan="4"><input type="text" id="pantalla" value="0" readonly></th>
-                </tr>
+              <tr>
+                <th colspan="4">
+                  <input
+                    type="text"
+                    id="pantalla"
+                    value="0"
+                    readonly
+                    aria-label="Pantalla de la calculadora"
+                  />
+                </th>
+              </tr>
             </thead>
             <tbody>
-                    <tr>
-                        <th><button onclick="">e</button></th>
-                        <th><button onclick="">CE</button></th>
-                        <th><button onclick="borrar()">C</button></th>
-                        <th><button >-</button></th>
-                    </tr>
-                    <tr>
-                        <th><button onclick="escribir('7')">7</button></th>
-                        <th><button onclick="escribir('8')">8</button></th>
-                        <th><button onclick="escribir('9')">9</button></th>
-                        <th><button onclick="escribir('/')">/</button></th>
-                    </tr>
-                    <tr>
-                        <th><button onclick="escribir('4')">4</button></th>
-                        <th><button onclick="escribir('5')">5</button></th>
-                        <th><button onclick="escribir('6')">6</button></th>
-                        <th><button onclick="escribir('*')">*</button></th>
-                    </tr>
-                    <tr>
-                        <th><button onclick="escribir('1')">1</button></th>
-                        <th><button onclick="escribir('2')">2</button></th>
-                        <th><button onclick="escribir('3')">3</button></th>
-                        <th><button onclick="escribir('-')">-</button></th>
-                    </tr>
-                    <tr>
-                        <th><button onclick="escribir('0')">0</button></th>
-                        <th><button onclick="escribir(',')">,</button></th>
-                        <th><button onclick="calcular()">=</button></th>
-                        <th><button onclick="escribir('+')">+</button></th>
-                    </tr>
+              <tr>
+                <th><button type="button" onclick="">e</button></th>
+                <th><button type="button" onclick="">CE</button></th>
+                <th><button type="button" onclick="borrar()">C</button></th>
+                <th><button type="button">-</button></th>
+              </tr>
+              <tr>
+                <th><button type="button" onclick="escribir('7')">7</button></th>
+                <th><button type="button" onclick="escribir('8')">8</button></th>
+                <th><button type="button" onclick="escribir('9')">9</button></th>
+                <th><button type="button" onclick="escribir('/')">/</button></th>
+              </tr>
+              <tr>
+                <th><button type="button" onclick="escribir('4')">4</button></th>
+                <th><button type="button" onclick="escribir('5')">5</button></th>
+                <th><button type="button" onclick="escribir('6')">6</button></th>
+                <th><button type="button" onclick="escribir('*')">*</button></th>
+              </tr>
+              <tr>
+                <th><button type="button" onclick="escribir('1')">1</button></th>
+                <th><button type="button" onclick="escribir('2')">2</button></th>
+                <th><button type="button" onclick="escribir('3')">3</button></th>
+                <th><button type="button" onclick="escribir('-')">-</button></th>
+              </tr>
+              <tr>
+                <th><button type="button" onclick="escribir('0')">0</button></th>
+                <th><button type="button" onclick="escribir(',')">,</button></th>
+                <th><button type="button" onclick="calcular()">=</button></th>
+                <th><button type="button" onclick="escribir('+')">+</button></th>
+              </tr>
             </tbody>
-        </table>
+          </table>
+        </main>
+        <footer><p>Lenguaje de Marcas · DAW</p></footer>
     </body>
 </html>

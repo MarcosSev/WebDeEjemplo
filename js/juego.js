@@ -39,6 +39,6 @@ function juego(jugador) {
   document.getElementById("jugada-jugador").textContent =
     `Tu elección: ${jugador}`;
   document.getElementById("jugada-maquina").textContent =
-    `Elección de la maquina: ${maquina}`;
+    `Elección de la máquina: ${maquina}`;
   document.getElementById("mensaje").textContent = mensaje;
 }

@@ -1,12 +1,40 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Piedra, papel o tijera</title>
     <link rel="stylesheet" href="../css/estilo.css" />
     <script src="../js/juego.js" defer></script>
     <script src="../js/tema.js" defer></script>
   </head>
   <body>
+    <nav class="site-navigation" aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="horario.html">Horario</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li>
+          <details class="nav-dropdown">
+            <summary>Actividades</summary>
+            <div class="nav-menu">
+              <a href="../Act1/Ej1.html">Act. 1 - Ej. 1</a>
+              <a href="../Act1/Ej2.html">Act. 1 - Ej. 2</a>
+              <a href="../Act1/Ej3.html">Act. 1 - Ej. 3</a>
+              <a href="../Act2/Ej1.html">Act. 2 - Ej. 1</a>
+              <a href="../Act2/Ej2.html">Act. 2 - Ej. 2</a>
+              <a href="../Act2/ej3.html">Act. 2 - Ej. 3</a>
+            </div>
+          </details>
+        </li>
+        <li><a href="PPTjuego.html">Piedra, papel o tijera</a></li>
+        <li><a href="Calculadora.html">Calculadora</a></li>
+      </ul>
+    </nav>
+    <header>
+      <p class="eyebrow">Juego rápido</p>
+      <h1>Piedra, papel o tijera</h1>
+    </header>
     <main class="game-page">
       <div class="opciones">
         <button type="button" onclick="juego('piedra')">
@@ -29,11 +57,12 @@
       <p id="perdidas">Partidas perdidas: 0</p>
 
       <section id="resultado">
-        <h2>resultado</h2>
+        <h2>Resultado de la ronda</h2>
         <p id="jugada-jugador">Tu jugada aparecerá aquí</p>
         <p id="jugada-maquina">La maquina eligió</p>
         <p id="mensaje"></p>
       </section>
     </main>
+    <footer><p>Lenguaje de Marcas · DAW</p></footer>
   </body>
 </html>

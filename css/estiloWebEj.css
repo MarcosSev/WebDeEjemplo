@@ -1,42 +1,158 @@
-header,
-footer {
-  background: fixed, rgb(0, 0, 0);
-  padding: 20px 20px 30px;
-  text-align: center;
-  color: azure;
+.schedule-page {
+  background-color: #f5f7fc;
 }
 
-th,
-td {
-  border: 1px solid rgb(0, 217, 255);
-  padding: 0.5rem;
-  text-align: left;
-  text-align: center;
+.schedule-page header {
+  width: min(100% - 2rem, 1240px);
 }
 
-thead {
-  background-color: rgb(222, 231, 96);
-  color: rgb(24, 13, 13);
-  font-size: 16px;
+.schedule-page main {
+  width: min(100% - 2rem, 1240px);
+  overflow-x: auto;
 }
 
-.Programación {
-  background-color: rgb(15, 134, 150);
-  color: rgb(24, 13, 13);
-  font-size: 17px;
-}
-
-fieldset {
-  border: 1px solid rgb(0, 217, 255);
-  padding: 0.5rem;
-  margin-top: 1rem;
-  text-align: left;
-}
-
-body {
-  background-color: rgb(250, 250, 250);
-  color: rgb(0, 0, 0);
-  font-family: "comic sans ms", sans-serif;
+.schedule-page table.schedule {
+  display: table;
+  width: 100%;
+  min-width: 820px;
   margin: 0;
-  padding: 0;
+  overflow: visible;
+  table-layout: fixed;
+  white-space: normal;
+}
+
+.schedule-page .schedule th,
+.schedule-page .schedule td {
+  padding: clamp(0.65rem, 1vw, 0.95rem) 0.6rem;
+  font-size: clamp(0.875rem, 0.4vw + 0.8rem, 1rem);
+  line-height: 1.45;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.schedule-page .schedule thead th {
+  padding: 0.9rem 0.6rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.schedule-page .schedule caption {
+  padding: 0.85rem 1rem;
+  color: var(--color-ink);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.schedule-page .schedule th:first-child,
+.schedule-page .schedule td.time-slot {
+  width: 7.25rem;
+  color: #536079;
+  background-color: #f5f7fc;
+  font-weight: 700;
+}
+
+.schedule-page .schedule td.time-slot {
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule td.Programación {
+  color: #2b396f;
+  background-color: #e4e9ff;
+}
+
+.schedule td.recess {
+  color: #176253;
+  background-color: #d9f3ee;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.schedule td.subject-systems {
+  color: #28603d;
+  background-color: #e4f2e8;
+}
+
+.schedule td.subject-databases {
+  color: #664572;
+  background-color: #f2eaf5;
+}
+
+.schedule td.subject-employment {
+  color: #713e43;
+  background-color: #f5e8e9;
+}
+
+.schedule td.subject-english,
+.schedule td.subject-sustainability {
+  color: #245564;
+  background-color: #e3f1f5;
+}
+
+.schedule td.subject-intermodular {
+  color: #34603a;
+  background-color: #e7f2e5;
+}
+
+.schedule td.subject-language {
+  color: #70512b;
+  background-color: #f8f0df;
+}
+
+.schedule td.subject-digitalization {
+  color: #753e43;
+  background-color: #f7e8e9;
+}
+
+.schedule td.subject-environments {
+  color: #5e5730;
+  background-color: #f3f0df;
+}
+
+:root[data-theme="night"] .schedule td.time-slot {
+  color: #d4dced;
+  background-color: #202d43 !important;
+}
+
+:root[data-theme="night"] .schedule td.subject-systems,
+:root[data-theme="night"] .schedule td.subject-intermodular {
+  color: #d8f0dc;
+  background-color: #245743 !important;
+}
+
+:root[data-theme="night"] .schedule td.subject-databases {
+  color: #f0def5;
+  background-color: #594267 !important;
+}
+
+:root[data-theme="night"] .schedule td.subject-employment,
+:root[data-theme="night"] .schedule td.subject-digitalization {
+  color: #f7dfe2;
+  background-color: #623b47 !important;
+}
+
+:root[data-theme="night"] .schedule td.subject-english,
+:root[data-theme="night"] .schedule td.subject-sustainability {
+  color: #d9edf4;
+  background-color: #245564 !important;
+}
+
+:root[data-theme="night"] .schedule td.subject-language,
+:root[data-theme="night"] .schedule td.subject-environments {
+  color: #f1e7c9;
+  background-color: #66532f !important;
+}
+
+:root[data-theme="night"] .schedule td.Programación {
+  color: #e3e9ff;
+  background-color: #2b3d60 !important;
+}
+
+:root[data-theme="night"] .schedule td.recess {
+  color: #d7f0e9;
+  background-color: #23483f !important;
 }

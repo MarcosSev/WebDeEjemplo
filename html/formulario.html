@@ -2,24 +2,37 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Formulario</title>
     <link rel="stylesheet" href="../css/estilo.css" />
-    <script src="/js/tema.js" defer></script>
+    <script src="../js/tema.js" defer></script>
   </head>
   <body>
+    <nav class="site-navigation" aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="horario.html">Horario</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li>
+          <details class="nav-dropdown">
+            <summary>Actividades</summary>
+            <div class="nav-menu">
+              <a href="../Act1/Ej1.html">Act. 1 - Ej. 1</a>
+              <a href="../Act1/Ej2.html">Act. 1 - Ej. 2</a>
+              <a href="../Act1/Ej3.html">Act. 1 - Ej. 3</a>
+              <a href="../Act2/Ej1.html">Act. 2 - Ej. 1</a>
+              <a href="../Act2/Ej2.html">Act. 2 - Ej. 2</a>
+              <a href="../Act2/ej3.html">Act. 2 - Ej. 3</a>
+            </div>
+          </details>
+        </li>
+        <li><a href="PPTjuego.html">Piedra, papel o tijera</a></li>
+        <li><a href="Calculadora.html">Calculadora</a></li>
+      </ul>
+    </nav>
     <header>
+      <p class="eyebrow">Contacto</p>
       <h1>Formulario</h1>
-      <nav>
-        <ul>
-          <a href="/index.html">Inicio</a>
-        </ul>
-        <ul>
-          <a href="/html/horario.html">Horario</a>
-        </ul>
-        <ul>
-          <a href="/html/formulario.html">Formulario</a>
-        </ul>
-      </nav>
     </header>
     <main>
       <h2>Formulario de contacto</h2>
@@ -90,18 +103,19 @@
             ></textarea
             ><br />
           </p>
-          <legend>Botones</legend>
-          <p><button type="submit">Enviar formulario</button></p>
-          <p><button type="reset">Limpiar formulario</button></p>
+          <div class="form-actions">
+            <button type="submit">Enviar formulario</button>
+            <button type="reset">Limpiar formulario</button>
+          </div>
         </fieldset>
       </form>
     </main>
+    <footer>
+      <p>CIFP Virgen de Gracia</p>
+      <p>
+        Contacto:
+        <a href="mailto:marcosclase124@gmail.com">marcosclase12@gmail.com</a>
+      </p>
+    </footer>
   </body>
-  <footer>
-    <p>CIFP Virgen de Gracia</p>
-    <p>
-      Contacto:
-      <a href="mailto:marcosclase124@gmail.com">marcosclase12@gmail.com</a>
-    </p>
-  </footer>
 </html>
